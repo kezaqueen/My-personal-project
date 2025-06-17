@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Makeup Mastery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Makeup Mastery Logo" class="logo">
+    <h1>Welcome to Makeup Mastery</h1>
+    <nav>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section id="hero">
+    <h2>Learn Makeup From the Best!</h2>
+    <p>Step-by-step tutorials, tips, and tricks for all levels.</p>
+    <button onclick="showSignup()">Join Our Community</button>
+  </section>
+  <section id="tutorials">
+    <h2>Popular Tutorials</h2>
+    <div class="tutorial-card">
+      <img src="images/makeup1.jpg" alt="Natural Look">
+      <h3>Natural Everyday Look</h3>
+      <button onclick="showDetails('natural')">View Details</button>
+    </div>
+    <div class="tutorial-card">
+      <img src="images/makeup2.jpg" alt="Glamorous Look">
+      <h3>Glamorous Night Out</h3>
+      <button onclick="showDetails('glam')">View Details</button>
+    </div>
+  </section>
+  <section id="gallery">
+    <h2>Student Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/makeup1.jpg" alt="Student Look 1">
+      <img src="images/makeup2.jpg" alt="Student Look 2">
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return sendMessage()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="formStatus"></p>
+  </section>
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSignup()">&times;</span>
+      <h2>Sign Up</h2>
+      <input type="email" placeholder="Your Email">
+      <button>Subscribe</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
